@@ -1,12 +1,14 @@
 ---
 import BaseLayoutWithTailwind from "../layouts/BaseLayoutWithTailwind.astro";
+import SimpleFormPlain from "../components/SimpleFormPlain.astro";
+import SimpleForm from "../components/SimpleForm";
 
 // Since this page is not using server, we will pre-render it
 export const prerender = true;
 ---
 
-<BaseLayoutWithTailwind>
-	<main class="p-4">
-		Learning Astro SSR
-	</main>
+<BaseLayoutWithTailwind title={"Belajar SSR"}>
+  <main class="p-4">Learning Astro SSR</main>
+  <SimpleFormPlain />
+  <SimpleForm client:visible />
 </BaseLayoutWithTailwind>
